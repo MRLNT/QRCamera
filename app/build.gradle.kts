@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.mrlnt.qrcamera"
-    compileSdk = 36 // Pastikan Anda sudah menginstal SDK 36
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.mrlnt.qrcamera"
@@ -30,13 +30,11 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // Anda mungkin perlu menambahkan ini untuk CameraX
     buildFeatures {
-        viewBinding = true // Opsional, tapi sangat membantu
+        viewBinding = true
     }
 }
 
-// ... (Bagian atas file)
 
 dependencies {
     implementation(libs.appcompat)
@@ -49,7 +47,6 @@ dependencies {
 
     val cameraxVersion = "1.4.1"
 
-    // 2. Dependensi menggunakan notasi 'implementation("string:string:version")'
     implementation("androidx.camera:camera-core:$cameraxVersion")
     implementation("androidx.camera:camera-camera2:$cameraxVersion")
     implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
